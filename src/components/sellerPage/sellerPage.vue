@@ -1,0 +1,45 @@
+<template>
+  <div>
+    <v-header />
+    <ul class="tab-menu">
+      <router-link :to="{name: 'goods'}" tag="li" class="tab-item">商品</router-link>
+      <router-link :to="{name: 'ratings'}" tag="li" class="tab-item">评价</router-link>
+      <router-link :to="{name: 'seller'}" tag="li" class="tab-item">商家</router-link>
+    </ul>
+    <div class="tab-content">
+      <router-view/>
+    </div>
+  </div>
+</template>
+
+<script>
+import header from './components/header'
+
+export default {
+  components: {
+    'v-header': header
+  }
+}
+</script>
+
+<style lang="less" scoped>
+@import '../../util';
+
+.tab{
+  &-menu{
+    display: flex;
+    height: 80px;
+    font-size: 28px;
+    .border-1px(rgba(7, 17,27, 0.1))
+  }
+  &-item{
+    flex: 1;
+    text-align: center;
+    color:rgb(77, 85, 93);
+    line-height: 80px;
+    &.active-router{
+      color: rgb(240, 20, 20)
+    }
+  }
+}
+</style>

@@ -1,0 +1,31 @@
+
+
+.border-1px(@color){
+  border-bottom: 1px solid @color;
+}
+
+.bg-img{
+  background-image: linear-gradient(90deg,#0af,#0085ff);
+}
+
+.triangleTop(@width, @color){
+  width: 0;
+  height: 0;
+  border: @width solid transparent;
+  border-top-color: @color;
+}
+
+.triangleBottom(@width, @color){
+  border: @width solid transparent;
+  border-bottom-color: @color;
+}
+
+.triangleLeft(@width, @color){
+  border: @width solid transparent;
+  border-left-color: @color;
+}
+
+.triangleRight(@width, @color){
+  border: @width solid transparent;
+  border-right-color: @color;
+}
