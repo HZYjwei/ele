@@ -8,7 +8,7 @@
       </div>
     </header>
     <div class="search-wrap">
-      <search v-bind="searchConfig" class="search">
+      <search class="home-search">
         <slot>
           <span>搜索饿了么商家、商品名称</span>
         </slot>
@@ -45,7 +45,7 @@ export default {
       align-items: center;
       overflow: hidden;
       white-space: nowrap;
-
+      height: 69px;
       color:#fff;
       font-size: 34px;
       font-weight: bold;
@@ -62,7 +62,7 @@ export default {
     .search-wrap{
       padding: 15px 0;
 
-      .search{
+      .home-search{
         display: flex;
         align-items: center;
         justify-content: center;

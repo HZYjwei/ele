@@ -8,14 +8,6 @@
 <script>
 export default {
   props: {
-    textAlign: {
-      type: String,
-      default: 'left'
-    },
-    fontSize: {
-      type: Number,
-      required: true
-    }
   }
 }
 </script>

@@ -1,20 +1,29 @@
 import Mock from 'mockjs'
-import data from './data'
+import shop from './shop'
+import home from './home'
 
-Mock.mock('/good/seller', {
+// home
+Mock.mock('/ele/home', {
   code: 0,
   codeMsg: '成功',
-  data: data.seller
+  data: home
 })
 
-Mock.mock('/good/goods', {
+// shop
+Mock.mock('/ele/good/seller', {
   code: 0,
   codeMsg: '成功',
-  data: data.goods
+  data: shop.seller
 })
 
-Mock.mock('/good/ratings', {
+Mock.mock('/ele/good/goods', {
   code: 0,
   codeMsg: '成功',
-  data: data.ratings
+  data: shop.goods
+})
+
+Mock.mock('/ele/good/ratings', {
+  code: 0,
+  codeMsg: '成功',
+  data: shop.ratings
 })
