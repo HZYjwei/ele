@@ -1,6 +1,6 @@
 # elem
 
-> ele项目，开始搭建与2018/7/11
+ele项目，开始搭建与2018/7/11
 技术栈
 >framework：
   vue + vue-router + vuex + axios
@@ -17,6 +17,9 @@
     line-height: 13.333vw;
     content: "viewport-units-buggyfill; height: 13.333vw; line-height: 13.333vw";
   ```
+
+> v-touch + fastclick:
+v-touch中tap好像不能`@tap.stop`,所以使用了`@click`
 
 ui库
 ElementUI， iconfont

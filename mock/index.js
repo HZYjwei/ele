@@ -1,6 +1,14 @@
 import Mock from 'mockjs'
 import shop from './shop'
 import home from './home'
+import indexBar from './indexBar'
+
+// index
+Mock.mock('/ele/indexBar', {
+  code: 0,
+  codeMsg: '成功',
+  data: indexBar
+})
 
 // home
 Mock.mock('/ele/home', {

@@ -51,7 +51,7 @@
   "shops": [
     {
       "name": "1点点（潮王店）",
-      "img": "//fuss10.elemecdn.com/a/90/7856ab964b9224bfa7a21d94c0b44jpeg.jpeg?imageMogr/format/webp/thumbnail/!130x130r/gravity/Center/crop/130x130/",
+      "shopAvatar": "//fuss10.elemecdn.com/a/90/7856ab964b9224bfa7a21d94c0b44jpeg.jpeg?imageMogr/format/webp/thumbnail/!130x130r/gravity/Center/crop/130x130/",
       "brand": true,
       "ratings": 5,
       "onsale": 2425,
@@ -64,18 +64,30 @@
         "icon": "//fuss10.elemecdn.com/a/c1/24c767ffa7fd296d3e2d6f01798c6png.png?imageMogr/format/webp/thumbnail/!60x60r/gravity/Center/crop/60x60/",
         "msg": "口碑人气好店"
       }],
-      "activities ": [
+      "activities": [
         {
           "msg": "首",
-          "discount": 17
+          "discount": "新用户下单立减17元"
         }, {
           "msg": "折",
           "discount": "五折限量抢购"
+        }, {
+          "msg": "折",
+          "discount": "单品折扣"
+        }, {
+          "msg": "折",
+          "discount": "单品折扣"
+        }, {
+          "msg": "折",
+          "discount": "单品折扣"
+        }, {
+          "msg": "折",
+          "discount": "单品折扣"
         }
       ]
     }, {
       "name": "付小姐在成都（文二路店）",
-      "img": "//fuss10.elemecdn.com/e/13/2326017c8f3bd435f281114ab616ajpeg.jpeg?imageMogr/format/webp/thumbnail/!130x130r/gravity/Center/crop/130x130/",
+      "shopAvatar": "//fuss10.elemecdn.com/e/13/2326017c8f3bd435f281114ab616ajpeg.jpeg?imageMogr/format/webp/thumbnail/!130x130r/gravity/Center/crop/130x130/",
       "brand": true,
       "ratings": 4.7,
       "onsale": 3365,
@@ -88,15 +100,15 @@
         "icon": "//fuss10.elemecdn.com/a/c1/24c767ffa7fd296d3e2d6f01798c6png.png?imageMogr/format/webp/thumbnail/!60x60r/gravity/Center/crop/60x60/",
         "msg": "口碑人气好店"
       }],
-      "activities ": [
+      "activities": [
         {
           "msg": "首",
-          "discount": 17
+          "discount": "新用户下单立减17元"
         }
       ]
     }, {
       "name": "小辣椒·牛蛙&小龙虾",
-      "img": "//fuss10.elemecdn.com/0/87/546b9643dd9186ce321d0c1cc4952png.png?imageMogr/format/webp/thumbnail/!130x130r/gravity/Center/crop/130x130/",
+      "shopAvatar": "//fuss10.elemecdn.com/0/87/546b9643dd9186ce321d0c1cc4952png.png?imageMogr/format/webp/thumbnail/!130x130r/gravity/Center/crop/130x130/",
       "ratings": 4.9,
       "onsale": 2773,
       "beyond": 0,
@@ -108,10 +120,10 @@
         "icon": "//fuss10.elemecdn.com/a/c1/24c767ffa7fd296d3e2d6f01798c6png.png?imageMogr/format/webp/thumbnail/!60x60r/gravity/Center/crop/60x60/",
         "msg": "口碑人气好店"
       }],
-      "activities ": [
+      "activities": [
         {
           "msg": "首",
-          "discount": 15
+          "discount": "新用户下单立减15元"
         }, {
           "msg": "减",
           "discount": "满58减9，满118减18，满238减28，满398减38"

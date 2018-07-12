@@ -40,21 +40,33 @@ const routes = [
       {
         path: 'home',
         name: 'home',
+        meta: {
+          index: 1
+        },
         component: Home,
         alias: '/home'
       }, {
         path: 'discover',
         name: 'discover',
+        meta: {
+          index: 2
+        },
         component: Discover,
         alias: '/discover'
       }, {
         path: 'order',
         name: 'order',
+        meta: {
+          index: 3
+        },
         component: Order,
         alias: '/order'
       }, {
         path: 'profile',
         name: 'profile',
+        meta: {
+          index: 4
+        },
         component: Profile,
         alias: '/profile'
       }
