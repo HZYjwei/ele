@@ -29,7 +29,7 @@
 
 <script>
 import ratingStart from '../../../components/ratingStar'
-import collapseItem from '../../../components/collapseItem'
+import collapseItem from './collapseItem'
 
 export default {
   props: {
@@ -88,7 +88,7 @@ export default {
   },
   methods: {
     gotoshop () {
-      this.$router.push({name: 'sellerPage'})
+      this.$router.push({name: 'goods'})
     }
   },
   components: {

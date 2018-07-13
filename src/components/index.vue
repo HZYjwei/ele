@@ -1,10 +1,9 @@
 <template>
   <div class="index">
-    <router-view></router-view>
+    <router-view class="index-wrap"></router-view>
     <div class="tabBar">
       <ul>
         <template v-for="item in indexBar">
-
           <router-link :to="{path: item.path}" tag="LI" :key="item.title">
             <columnItem :title="item.title" :img="item.img" width="100%" class="indexbar">
               <img :src="slotProps.img" alt=""  slot-scope="slotProps">
@@ -37,6 +36,9 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.index-wrap{
+  padding-bottom: 100px;
+}
 .tabBar {
   position: fixed;
   display: flex;

@@ -1,5 +1,5 @@
 <template>
-  <i :style="styleobj">{{value}}</i>
+  <i :style="styleobj" ref="i">{{value}}</i>
 </template>
 
 <script>
@@ -32,13 +32,13 @@ export default {
 <style lang="less" scoped>
   i{
     display: inline-block;
-    width: 28px;
-    height: 28px;
-    line-height: 28px;
+    // width: 28px;
+    // line-height: 30px;
+    font-size: 22px;
     font-style: normal;
     padding: 2px;
     // box-sizing: border-box;
-    border-radius: 8px;
+    border-radius: 4px;
     text-align:center;
   }
 </style>

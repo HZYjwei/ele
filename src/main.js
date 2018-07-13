@@ -2,7 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import { Carousel, CarouselItem } from 'element-ui'
+import { Carousel, CarouselItem, Input, Button } from 'element-ui'
 import VueTouch from 'vue-touch'
 import FastClick from 'fastclick'
 import router from './router'
@@ -18,6 +18,9 @@ Vue.config.productionTip = false
 // ElementUI跑马灯
 Vue.use(Carousel)
 Vue.use(CarouselItem)
+
+Vue.use(Input)
+Vue.use(Button)
 
 // Vue手机事件
 Vue.use(VueTouch, {name: 'v-touch'})

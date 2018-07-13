@@ -12,6 +12,9 @@ import Ratings from '../components/sellerPage/components/ratings'
 import Seller from '../components/sellerPage/components/seller'
 import notFound from '../components/notFound'
 
+// 其他界面
+import Login from '../components/login'
+import Location from '../components/location'
 const routes = [
   {
     path: '/sellerPage',
@@ -49,7 +52,8 @@ const routes = [
         path: 'discover',
         name: 'discover',
         meta: {
-          index: 2
+          index: 2,
+          title: '发现'
         },
         component: Discover,
         alias: '/discover'
@@ -57,7 +61,8 @@ const routes = [
         path: 'order',
         name: 'order',
         meta: {
-          index: 3
+          index: 3,
+          title: '订单'
         },
         component: Order,
         alias: '/order'
@@ -65,12 +70,21 @@ const routes = [
         path: 'profile',
         name: 'profile',
         meta: {
-          index: 4
+          index: 4,
+          title: '我的'
         },
         component: Profile,
         alias: '/profile'
       }
     ]
+  }, {
+    path: '/login',
+    name: 'login',
+    component: Login
+  }, {
+    path: '/location',
+    name: 'location',
+    component: Location
   }, {
     path: '/err',
     name: 'err',

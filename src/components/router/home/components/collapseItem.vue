@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import ifont from './icon'
+import ifont from '../../../components/ifont'
 
 export default {
   props: {

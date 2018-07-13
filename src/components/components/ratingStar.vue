@@ -33,7 +33,7 @@ export default {
   },
   computed: {
     topWidth () {
-      return parseInt(this.size) * 5.6 * this.ratings / 5 + 'vw'
+      return parseFloat(this.size) * 5.6 * this.ratings / 5 + 'vw'
     }
   }
 }

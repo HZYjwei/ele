@@ -20,6 +20,7 @@
 <script>
 import search from '../../components/search'
 export default {
+  name: 'homeTopBar',
   data () {
     return {
       location: {
