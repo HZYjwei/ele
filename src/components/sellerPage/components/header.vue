@@ -97,7 +97,7 @@ export default {
     &-wrapper {
       position: relative;
       display: flex;
-      padding: 48px;
+      padding: 48px 48px 36px 48px;
     }
     &-avatar{
       display: inline-block;

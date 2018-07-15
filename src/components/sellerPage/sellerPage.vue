@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="sellerPage">
     <v-header :seller="seller"/>
     <ul class="tab-menu">
       <router-link :to="{name: 'goods'}" tag="li" class="tab-item">商品</router-link>
@@ -7,7 +7,7 @@
       <router-link :to="{name: 'seller'}" tag="li" class="tab-item">商家</router-link>
     </ul>
     <div class="tab-content">
-      <router-view/>
+      <router-view :seller="seller" />
     </div>
   </div>
 </template>
@@ -40,6 +40,10 @@ export default {
 <style lang="less" scoped>
 @import '../../util';
 
+#sellerPage{
+  height: 100vh;
+  overflow: hidden;
+}
 .tab{
   &-menu{
     display: flex;

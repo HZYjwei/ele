@@ -35,6 +35,12 @@ export default {
       this.modeStyle = this.modeStyle === 'none' ? this.collMaxHeight : 'none'
     }
   },
+  // created () {
+  //   this.$nextTick( () => {
+  //     this.collMaxHeight = this.$refs.coll ? this.$refs.coll.children[0].offsetHeight * this.max + 'px' : '0'
+  //     this.modeStyle = this.collMaxHeight
+  //   })
+  // },
   mounted () {
     this.collMaxHeight = this.$refs.coll ? this.$refs.coll.children[0].offsetHeight * this.max + 'px' : '0'
     this.modeStyle = this.collMaxHeight
