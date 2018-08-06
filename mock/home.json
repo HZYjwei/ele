@@ -2,56 +2,56 @@
   "mintSwipe": [
     {
       "title": "美食",
-      "img": "//fuss10.elemecdn.com/7/d8/a867c870b22bc74c87c348b75528djpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/"
+      "img": "http://fuss10.elemecdn.com/7/d8/a867c870b22bc74c87c348b75528djpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/"
     }, {
       "title": "商店便利",
-      "img": "//fuss10.elemecdn.com/c/3c/0184f5b3fa72f295fc01864734218jpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/"
+      "img": "http://fuss10.elemecdn.com/c/3c/0184f5b3fa72f295fc01864734218jpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/"
     }, {
       "title": "果蔬生鲜",
-      "img": "//fuss10.elemecdn.com/c/db/d20d49e5029281b9b73db1c5ec6f9jpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/"
+      "img": "http://fuss10.elemecdn.com/c/db/d20d49e5029281b9b73db1c5ec6f9jpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/"
     }, {
       "title": "下午茶",
-      "img": "//fuss10.elemecdn.com/7/a9/77ff360f7d3fde2d459727ad09fcfjpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/"
+      "img": "http://fuss10.elemecdn.com/7/a9/77ff360f7d3fde2d459727ad09fcfjpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/"
     }, {
       "title": "医药健康",
-      "img": "//fuss10.elemecdn.com/7/0a/af108e256ebc9f02db599592ae655jpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/"
+      "img": "http://fuss10.elemecdn.com/7/0a/af108e256ebc9f02db599592ae655jpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/"
     }, {
       "title": "大牌5折",
-      "img": "//fuss10.elemecdn.com/a/7b/b02bd836411c016935d258b300cfejpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/"
+      "img": "http://fuss10.elemecdn.com/a/7b/b02bd836411c016935d258b300cfejpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/"
     }, {
       "title": "浪漫鲜花",
-      "img": "//fuss10.elemecdn.com/3/01/c888acb2c8ba9e0c813f36ec9e90ajpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/"
+      "img": "http://fuss10.elemecdn.com/3/01/c888acb2c8ba9e0c813f36ec9e90ajpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/"
     }, {
       "title": "麻辣烫",
-      "img": "//fuss10.elemecdn.com/e/c7/b7ba9547aa700bd20d0420e1794a8jpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/"
+      "img": "http://fuss10.elemecdn.com/e/c7/b7ba9547aa700bd20d0420e1794a8jpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/"
     }, {
       "title": "地方菜系",
-      "img": "//fuss10.elemecdn.com/a/8a/ec21096d528b7cfd23cdd894f01c6jpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/"
+      "img": "http://fuss10.elemecdn.com/a/8a/ec21096d528b7cfd23cdd894f01c6jpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/"
     }, {
       "title": "披萨意面",
-      "img": "//fuss10.elemecdn.com/7/b6/235761e50d391445f021922b71789jpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/"
+      "img": "http://fuss10.elemecdn.com/7/b6/235761e50d391445f021922b71789jpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/"
     }, {
       "title": "地方小吃",
-      "img": "//fuss10.elemecdn.com/7/d6/6f2631288a44ec177204e05cbcb93jpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/"
+      "img": "http://fuss10.elemecdn.com/7/d6/6f2631288a44ec177204e05cbcb93jpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/"
     }
   ],
   "hot": [
     {
       "title": "品质套餐",
       "msg": "搭配齐全吃得好",
-      "img": "//fuss10.elemecdn.com/d/d4/16ff085900d62b8d60fa7e9c6b65dpng.png?imageMogr/format/webp/thumbnail/!240x160r/gravity/Center/crop/240x160/",
+      "img": "http://fuss10.elemecdn.com/d/d4/16ff085900d62b8d60fa7e9c6b65dpng.png?imageMogr/format/webp/thumbnail/!240x160r/gravity/Center/crop/240x160/",
       "num": 0
     }, {
       "title": "限量抢购",
       "msg": "超值美味",
-      "img": "//fuss10.elemecdn.com/b/e1/0fa0ed514c093a7138b0b9a50d61fpng.png?imageMogr/format/webp/thumbnail/!240x160r/gravity/Center/crop/240x160/",
+      "img": "http://fuss10.elemecdn.com/b/e1/0fa0ed514c093a7138b0b9a50d61fpng.png?imageMogr/format/webp/thumbnail/!240x160r/gravity/Center/crop/240x160/",
       "num": 2324
     }
   ],
   "shops": [
     {
       "name": "1点点（潮王店）",
-      "shopAvatar": "//fuss10.elemecdn.com/a/90/7856ab964b9224bfa7a21d94c0b44jpeg.jpeg?imageMogr/format/webp/thumbnail/!130x130r/gravity/Center/crop/130x130/",
+      "shopAvatar": "http://fuss10.elemecdn.com/a/90/7856ab964b9224bfa7a21d94c0b44jpeg.jpeg?imageMogr/format/webp/thumbnail/!130x130r/gravity/Center/crop/130x130/",
       "brand": true,
       "ratings": 5,
       "onsale": 2425,
@@ -61,7 +61,7 @@
       "distance": "449m",
       "time": "20分钟",
       "tag": [{
-        "icon": "//fuss10.elemecdn.com/a/c1/24c767ffa7fd296d3e2d6f01798c6png.png?imageMogr/format/webp/thumbnail/!60x60r/gravity/Center/crop/60x60/",
+        "icon": "http://fuss10.elemecdn.com/a/c1/24c767ffa7fd296d3e2d6f01798c6png.png?imageMogr/format/webp/thumbnail/!60x60r/gravity/Center/crop/60x60/",
         "msg": "口碑人气好店"
       }],
       "activities": [
@@ -87,7 +87,7 @@
       ]
     }, {
       "name": "付小姐在成都（文二路店）",
-      "shopAvatar": "//fuss10.elemecdn.com/e/13/2326017c8f3bd435f281114ab616ajpeg.jpeg?imageMogr/format/webp/thumbnail/!130x130r/gravity/Center/crop/130x130/",
+      "shopAvatar": "http://fuss10.elemecdn.com/e/13/2326017c8f3bd435f281114ab616ajpeg.jpeg?imageMogr/format/webp/thumbnail/!130x130r/gravity/Center/crop/130x130/",
       "brand": true,
       "ratings": 4.7,
       "onsale": 3365,
@@ -97,7 +97,7 @@
       "distance": "3.02km",
       "time": "47分钟",
       "tag": [{
-        "icon": "//fuss10.elemecdn.com/a/c1/24c767ffa7fd296d3e2d6f01798c6png.png?imageMogr/format/webp/thumbnail/!60x60r/gravity/Center/crop/60x60/",
+        "icon": "http://fuss10.elemecdn.com/a/c1/24c767ffa7fd296d3e2d6f01798c6png.png?imageMogr/format/webp/thumbnail/!60x60r/gravity/Center/crop/60x60/",
         "msg": "口碑人气好店"
       }],
       "activities": [
@@ -108,7 +108,7 @@
       ]
     }, {
       "name": "小辣椒·牛蛙&小龙虾",
-      "shopAvatar": "//fuss10.elemecdn.com/0/87/546b9643dd9186ce321d0c1cc4952png.png?imageMogr/format/webp/thumbnail/!130x130r/gravity/Center/crop/130x130/",
+      "shopAvatar": "http://fuss10.elemecdn.com/0/87/546b9643dd9186ce321d0c1cc4952png.png?imageMogr/format/webp/thumbnail/!130x130r/gravity/Center/crop/130x130/",
       "ratings": 4.9,
       "onsale": 2773,
       "beyond": 0,
@@ -117,7 +117,7 @@
       "distance": "1.96km",
       "time": "42分钟",
       "tag": [{
-        "icon": "//fuss10.elemecdn.com/a/c1/24c767ffa7fd296d3e2d6f01798c6png.png?imageMogr/format/webp/thumbnail/!60x60r/gravity/Center/crop/60x60/",
+        "icon": "http://fuss10.elemecdn.com/a/c1/24c767ffa7fd296d3e2d6f01798c6png.png?imageMogr/format/webp/thumbnail/!60x60r/gravity/Center/crop/60x60/",
         "msg": "口碑人气好店"
       }],
       "activities": [

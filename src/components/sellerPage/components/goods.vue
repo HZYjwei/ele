@@ -1,11 +1,13 @@
 <template>
   <div id="goods">
     <div class="menu-wrapper" ref="menuWrap">
-      <div v-for="(item, index) in goods" :key="index" class="menu-item" :class="{current : index === currentIndex}" @click="selectIndex(index, $event)">
-        <div class="text-wrap">
-          <div>
-          <ifont v-if="item.type !== -1" :value="item.type"/>
-          {{item.name}}
+      <div>
+        <div v-for="(item, index) in goods" :key="index" class="menu-item" :class="{current : index === currentIndex}" @click="selectIndex(index, $event)">
+          <div class="text-wrap">
+            <div>
+            <ifont v-if="item.type !== -1" :value="item.type"/>
+            {{item.name}}
+            </div>
           </div>
         </div>
       </div>
@@ -151,16 +153,19 @@ export default {
 
 <style lang="less" scoped>
 #goods{
+  // position: absolute;
   display: flex;
-  height: calc(67vh);
-  overflow: auto;
+  z-index: -1;
+  height: 67vh;
+  overflow: hidden;
   .menu-wrapper{
     width: 160px;
     font-size: 24px;
     line-height: 28px;
     font-weight: 200;
     color: rgb(40, 20, 20);
-
+    // height: 100%;
+    // overflow: auto;
     .menu-item{
       padding: 0 24px;
       height: 108px;

@@ -10,15 +10,15 @@
         <div :class="{price: true, 'noCount': totalCount > 0}">￥{{totalPrice}}</div>
         <div class="deliveryPrice">另需配送费{{deliveryPrice}}元</div>
       </div>
-      <div class="deliver-base" :class="{'payfor': minPrice < totalPrice}">
+      <div class="deliver-base" :class="{'payfor': minPrice <= totalPrice}">
         {{inform}}
       </div>
     </div>
     <div class="cart-list-wrap" v-show="showMore && totalCount > 0">
-      <div class="cart-bg"></div>
+      <div class="cart-bg" @click="showMore = !showMore"></div>
       <div class="cart-list">
         <div class="cart-list-header">
-          <span class="cart-title">购物车</span><span class="clear">清空</span>
+          <span class="cart-title">购物车</span><span class="clear" @click="clearCount">清空</span>
         </div>
         <div class="food-list-items">
           <div class="food-item" v-for="food in selectFoods" :key="food.name">
@@ -57,6 +57,14 @@ export default {
           price: 0
         }
       }
+    }
+  },
+  methods: {
+    clearCount () {
+      this.selectFoods.forEach(food => {
+        food.count = 0
+        this.showMore = !this.showMore
+      })
     }
   },
   computed: {
