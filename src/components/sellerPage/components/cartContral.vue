@@ -3,12 +3,18 @@
     <span class="decrease iconfont icon-minus2" v-show="food.count > 0" @click="remove"></span>
     <span class="count" v-show="food.count > 0">{{food.count}}</span>
     <span class="increase iconfont icon-0801zengjia" @click="add"></span>
+    <!-- <span class="ball" ref="ball"></span> -->
   </div>
 </template>
 
 <script>
 export default {
   name: 'cartContal',
+  data () {
+    return {
+      addLock: false
+    }
+  },
   props: {
     food: {
       type: Object
@@ -28,15 +34,21 @@ export default {
       }
     },
     add () {
-      if (event._constructed) {
-        if (!this.food.count) {
-          this.$set(this.food, 'count')
-          this.food.count = 1
+      if (!this.addLock) {
+        this.addLock = true
+        if (event._constructed) {
+          if (!this.food.count) {
+            this.$set(this.food, 'count')
+            this.food.count = 1
+          } else {
+            this.food.count++
+          }
         } else {
           this.food.count++
         }
-      } else {
-        this.food.count++
+        setTimeout(() => {
+          this.addLock = false
+        }, 200)
       }
     }
   }
@@ -66,5 +78,43 @@ export default {
     vertical-align: middle;
   }
 
+  @keyframes parabola {
+    0% {
+      visibility: visible;
+      right: 12px;
+      bottom: 12px;
+    }
+    25% {
+      visibility: visible;
+      right: 40px;
+      bottom: 70px;
+    }
+    100% {
+      visibility: hidden;
+      right: 100px;
+      bottom: -700px;
+    }
+  }
+  .ball{
+    position: absolute;
+    visibility: hidden;
+    background-color: #00a0dc;
+    border-radius: 50%;
+    right: 12px;
+    bottom: 12px;
+    width: 46px;
+    height: 46px;
+
+    // transition: all 2s linear;
+    &-end {
+
+      animation: parabola 1.5s ease-in-out;
+      // display: block;
+      // left: -480px;
+      // bottom: -1000px;
+      // top: auto;
+      // right: auto;
+    }
+  }
 }
 </style>

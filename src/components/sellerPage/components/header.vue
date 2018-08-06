@@ -12,7 +12,7 @@
         <div class="content-detail-msg">
           <span>{{seller.description}} / {{costTime}}</span>
         </div>
-        <div class="content-detail-discount" v-if="showSupport && showSupport.type">
+        <div class="content-detail-discount" v-if="showSupport && showSupport.type" @click="showMore">
           <ifont :value="showSupport.type"/>
           <span>{{showSupport.description}}</span>
           <div class="content-detail-discount-more">
@@ -23,7 +23,7 @@
       </div>
     </div>
     <div class="bulletin-wrapper">
-      <div class="bulletin-con">
+      <div class="bulletin-con"  @click="showMore">
         <ifont value="公告" bgcolor="#fff" color="#000"></ifont>
         <span>{{seller.bulletin}}</span>
       </div>
@@ -69,6 +69,9 @@ export default {
       let len = this.seller.supports.length
       let num = Math.floor(Math.random() * len)
       this.showSupport = this.seller.supports[num]
+    },
+    showMore () {
+      this.$emit('showMsg')
     }
   },
   watch: {

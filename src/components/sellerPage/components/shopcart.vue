@@ -25,7 +25,7 @@
             <span class="food-title">{{food.name}}</span>
             <div class="food-price-wrap">
               <span class="food-price">￥{{food.price * food.count}}</span>
-              <cart-contral class="cart-contral" :food=food />
+              <cart-contral class="food-cartcontral" :food=food />
             </div>
           </div>
         </div>
@@ -247,6 +247,9 @@ export default {
           font-size: 28px;
           font-weight: 700;
           color: rgb(240, 20, 20)
+        }
+        .food-cartcontral{
+          position: relative;
         }
       }
     }

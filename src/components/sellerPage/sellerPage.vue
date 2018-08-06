@@ -1,6 +1,7 @@
 <template>
   <div id="sellerPage">
-    <v-header :seller="seller"/>
+    <v-header :seller="seller" @showMsg="changeShowMsg"/>
+    <on-sell @hideMsg = "changeShowMsg" v-show="isShowSellMsg" :seller="seller"/>
     <ul class="tab-menu">
       <router-link :to="{name: 'goods'}" tag="li" class="tab-item">商品</router-link>
       <router-link :to="{name: 'ratings'}" tag="li" class="tab-item">评价</router-link>
@@ -14,13 +15,14 @@
 
 <script>
 import header from './components/header'
-
+import onSellMsg from './components/onSellMsg'
 import axios from 'axios'
 
 export default {
   data () {
     return {
-      seller: {}
+      seller: {},
+      isShowSellMsg: false
     }
   },
   created () {
@@ -32,7 +34,13 @@ export default {
       })
   },
   components: {
-    'v-header': header
+    'v-header': header,
+    onSell: onSellMsg
+  },
+  methods: {
+    changeShowMsg () {
+      this.isShowSellMsg = !this.isShowSellMsg
+    }
   }
 }
 </script>
