@@ -61,8 +61,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     new CopyWebpackPlugin([
       {
         from: path.resolve(__dirname, '../static'),
-        // to: config.dev.assetsSubDirectory,
-        to: config.dev.assetsCopyToBase,
+        to: config.dev.assetsSubDirectory,
+        // to: config.dev.assetsCopyToBase,
         ignore: ['.*']
       }
     ])
