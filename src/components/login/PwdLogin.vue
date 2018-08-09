@@ -9,6 +9,9 @@
 </template>
 
 <script>
+/**
+ * 密码登录
+ */
 export default {
   data () {
     return {
@@ -20,7 +23,8 @@ export default {
     loginByAccount () {
       // 假装请求了
       this.$store.commit('setSignIn', this.userName)
-      console.log(this.$store.getters.getUserInfo)
+      // console.log(this.$store.getters.getUserInfo)
+      this.$emit('deltaroute')
     }
   }
 }

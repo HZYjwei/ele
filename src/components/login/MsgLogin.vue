@@ -12,6 +12,15 @@
   </div>
 </template>
 
+<script>
+/**
+ * 手机登录
+ */
+export default {
+
+}
+</script>
+
 <style lang="less">
 .msg-input-wrap{
   width: 80vw;

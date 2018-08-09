@@ -10,6 +10,9 @@
 </template>
 
 <script>
+/**
+ * ele么的主页的筛选组件
+ */
 export default {
   data () {
     return {

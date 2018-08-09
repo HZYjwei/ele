@@ -3,6 +3,9 @@
 </template>
 
 <script>
+/**
+ * 一些标签字体
+ */
 export default {
   props: {
     value: {

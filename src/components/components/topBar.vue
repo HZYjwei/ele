@@ -4,7 +4,11 @@
     <span>{{title}}</span>
   </div>
 </template>
+
 <script>
+/**
+ * 主要是主页面的最上面的组件
+ */
 export default {
   name: 'topbar',
   props: {
@@ -33,6 +37,7 @@ export default {
   font-size: 36px;
   font-weight: bold;
   text-align: center;
+  z-index: 999;
   .bg-img();
 
   .iconfont{

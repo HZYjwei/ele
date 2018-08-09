@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'Vuex'
 
+import foodsModule from './selectedFoods'
+
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
@@ -30,7 +32,7 @@ const store = new Vuex.Store({
 
   },
   modules: {
-
+    foods: foodsModule
   }
 })
 

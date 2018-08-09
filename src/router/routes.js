@@ -1,20 +1,27 @@
 // 主界面
+// 一些不常用的的用异步加载
 import Index from '../components/index'
 import Home from '../components/router/home'
 import Discover from '../components/router/discover'
 import Order from '../components/router/order'
-import Profile from '../components/router/profile'
+// import Profile from '../components/router/profile'
 
 // 商店界面
 import SellerPage from '../components/sellerPage/sellerPage'
 import Goods from '../components/sellerPage/components/goods'
-import Ratings from '../components/sellerPage/components/ratings'
-import Seller from '../components/sellerPage/components/seller'
+// import Ratings from '../components/sellerPage/components/ratings'
+// import Seller from '../components/sellerPage/components/seller'
 import notFound from '../components/notFound'
 
 // 其他界面
 import Login from '../components/login'
 import Location from '../components/location'
+
+const Profile = () => import('../components/router/profile')
+
+const Ratings = () => import('../components/sellerPage/components/ratings')
+const Seller = () => import('../components/sellerPage/components/seller')
+
 const routes = [
   {
     path: '/sellerPage',

@@ -7,7 +7,7 @@
       <div>
         <i class="iconfont icon-changyonglogo40"></i>
         <div class="login-con">
-          <h3>登录/注册</h3>
+          <h3>{{loginInfo || '登录/注册'}}</h3>
           <i class="iconfont icon-phone"></i><span>登陆后享受更多特权</span>
         </div>
       </div>
@@ -26,11 +26,13 @@ import profileMenuList from './profile/profile-menuList'
 export default {
   data () {
     return {
-      title: ''
+      title: '',
+      loginInfo: ''
     }
   },
   created () {
     this.title = this.$router.currentRoute.meta.title
+    this.loginInfo = this.$store.getters.getUserInfo
   },
   components: {
     topBar,

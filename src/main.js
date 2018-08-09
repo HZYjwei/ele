@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import { Carousel, CarouselItem, Input, Button } from 'element-ui'
 import VueTouch from 'vue-touch'
-import FastClick from 'fastclick'
+// import FastClick from 'fastclick'
 import router from './router'
 import store from './store'
 // import './assets/viewport-units-buggyfill'
@@ -25,18 +25,6 @@ Vue.use(Button)
 // Vue手机事件
 Vue.use(VueTouch, {name: 'v-touch'})
 
-// 解决手机300ms延迟
-FastClick.attach(document.body)
-
-// window.onload = function () {
-//   window.viewportUnitsBuggyfill.init({
-//     hacks: window.viewportUnitsBuggyfillHacks
-//   })
-// }
-
-// axios({
-//   ...axiosconfaxig
-// })
 axios.defaults = Object.assign(axios.defaults, axiosconfig)
 
 // axios拦截器，超时的时候自动重发
@@ -61,6 +49,15 @@ axios.interceptors.response.use(undefined, function axiosRetryInterceptor (err) 
     return axios(config)
   })
 })
+
+// webpack返回的header：content-type只有text/html,传js会报错
+// if ('serviceWorker' in navigator) {
+//   navigator.serviceWorker.register('./serviceWorker.js', {
+//     scope: './'
+//   }).then(reg => {
+//     console.log(reg)
+//   })
+// }
 
 /* eslint-disable no-new */
 new Vue({

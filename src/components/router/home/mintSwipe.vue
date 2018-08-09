@@ -19,6 +19,9 @@
 </template>
 
 <script>
+/**
+ * 主页的轮播图，用了element-UI
+ */
 import mintItem from '../../components/columnItem'
 
 export default {

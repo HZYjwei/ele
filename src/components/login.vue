@@ -5,7 +5,7 @@
         <span :class="current===MSG && 'active'" @click="changMode(MSG)">短信登录</span>
         <span :class="current===PWD && 'active'" @click="changMode(PWD)">密码登录</span>
       </div>
-      <component :is="loginCom"></component>
+      <component :is="loginCom" @deltaroute="deltaRoute"></component>
     </div>
   </div>
 </template>
@@ -20,8 +20,14 @@ export default {
       MSG: 'msg',
       PWD: 'pwd',
       loginCom: MsgLogin,
-      current: this.MSG
+      current: this.MSG,
+      lastRoute: {}
     }
+  },
+  beforeRouteEnter (to, from, next) {
+    next(vm => {
+      vm.lastRoute = from
+    })
   },
   methods: {
     changMode (type) {
@@ -31,6 +37,10 @@ export default {
       } else if (type === this.MSG) {
         this.loginCom = MsgLogin
       }
+    },
+    deltaRoute () {
+      // console.log(this.$route)
+      this.$router.push({path: this.lastRoute.path})
     }
   },
   comopnents: {

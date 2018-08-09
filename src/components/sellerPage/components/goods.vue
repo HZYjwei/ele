@@ -39,11 +39,14 @@
         </li>
       </ul>
     </div>
-    <shopcart :selectFoods=selectFoods :deliveryPrice="seller.deliveryPrice" :minPrice="seller.minPrice"></shopcart>
+    <shopcart :selectFoods=selectFoods :deliveryPrice="seller.deliveryPrice" :minPrice="seller.minPrice" :selleravatar="seller.avatar" :sellername="seller.name"></shopcart>
   </div>
 </template>
 
 <script>
+/**
+ * goods中将对应的food信息传到cart
+ */
 import ifont from '../../components/ifont'
 import shopcart from './shopcart'
 import cartContral from './cartContral'
@@ -80,6 +83,9 @@ export default {
       })
   },
   methods: {
+    /**
+     * 当选中左边类型的时候，右边食物边滚动到相应Element
+     */
     selectIndex ($index, $event) {
       if (!$event._constructed) {
         return undefined
@@ -88,18 +94,26 @@ export default {
       let foodList = this.$refs.foodWrap.getElementsByClassName('foods-type-item')
       this.foodScroll.scrollToElement(foodList[$index], 300)
     },
+    /**
+     * 初始化better-scroll
+     */
     _initscroll () {
       this.menuScroll = new BScroll(this.$refs.menuWrap, {
         click: true
       })
       this.foodScroll = new BScroll(this.$refs.foodWrap, {
         probeType: 3,
+        // 实时监控
         click: true
       })
+      // foods滚动的时候,this.scrollY改变，触发computed的currentIndex
       this.foodScroll.on('scroll', (pos) => {
         this.scrollY = Math.abs(Math.round(pos.y))
       })
     },
+    /**
+     * 计算右边各个模块对于goods组件的Y轴偏移量
+     */
     _caculateHeight () {
       let foodList = this.$refs.foodWrap.getElementsByClassName('foods-type-item')
       let height = 0
@@ -107,7 +121,7 @@ export default {
       for (let i = 0; i < foodList.length; i++) {
         let item = foodList[i]
         // height += item.clientHeight
-        //  clientHeight === offsetHeight 但是取数的时候默认取证
+        // clientHeight === offsetHeight 但是取数的时候默认取证
         // 导致计算结果会差几px，所以先computedStyle相加，再Math.round
         height += parseFloat(window.getComputedStyle(item, null)['height'])
         this.heightList.push(height)
@@ -118,6 +132,9 @@ export default {
     }
   },
   computed: {
+    /**
+     * 记录当前选中的menu列表的index
+     */
     currentIndex: {
       get () {
         for (let i = 0; i < this.heightList.length; i++) {
@@ -129,6 +146,11 @@ export default {
         }
       }
     },
+    /**
+     * 遍历goods,当有count === true时，添加到一个新的arr，
+     * 这个值需要传到购物车组件
+     * tip：foods都是引用值
+     */
     selectFoods () {
       let foods = []
       if (this.goods.length !== 0) {

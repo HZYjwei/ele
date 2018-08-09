@@ -26,21 +26,21 @@
       </div>
       <div class="ratings-com">
         <div class="ratings-com-tags">
-          <div class="ratings-com-tag selected" @click="changetype('all')">
+          <div class="ratings-com-tag" @click="changetype('all')" :class="{selected: condition.type === 'all'}">
             <span>全部</span>
             <span class="ratings-com-num">57</span>
           </div>
-          <div class="ratings-com-tag" @click="changetype('zan')">
+          <div class="ratings-com-tag" @click="changetype('zan')" :class="{selected: condition.type === 'zan'}">
             <span>满意</span>
             <span class="ratings-com-num">57</span>
           </div>
-          <div class="ratings-com-tag" @click="changetype('buzan')">
+          <div class="ratings-com-tag" @click="changetype('buzan')" :class="{selected: condition.type === 'buzan'}">
             <span>不满意</span>
             <span class="ratings-com-num">57</span>
           </div>
         </div>
-        <div class="ratings-com-filter">
-          <i class="iconfont icon-dui" />
+        <div class="ratings-com-filter" @click="changeIgnore" :style="{color: condition.ignore ? '#00a0c8' : 'rgba(7,17,27,0.1)' }">
+          <i class="iconfont" :class="{'icon-dui': condition.ignore, 'icon-close': !condition.ignore}" />
           <span>只看有内容的评价</span>
         </div>
       </div>
@@ -52,7 +52,7 @@
           <div class="comment">
             <div class="username">{{comment.username}}</div>
             <div class="comment-ratings">
-              <rating-star size="2.667vw" :ratings="comment.score" />
+              <rating-star size="2.667vw" :ratings="comment.score || 0" />
               <span class="comment-time">{{comment.deliveryTime && comment.deliveryTime+"分钟送达"}}</span>
             </div>
             <div class="comment-con">
@@ -80,47 +80,85 @@ import BScroll from 'better-scroll'
 
 export default {
 
-  name: "sellerRatings",
+  name: 'sellerRatings',
   props: {
     seller: {
       type: Object,
       require: true
     }
   },
-  data() {
+  data () {
     return {
       comments: {},
-      renderCom: {}
+      renderCom: {},
+      condition: {
+        ignore: true,
+        type: 'all'
+      }
     }
   },
   created () {
     axios.get('/good/ratings')
       .then((res) => {
-        console.log(res);
-        if(res.status === 200){
+        if (res.status === 200) {
           this.comments = res.data.data
           this.renderCom = this.comments
         }
       })
   },
-  mounted() {
-    let scroll = new BScroll(this.$refs.sellRatings, {
-        click: true
-      })
-    console.log(scroll)
+  mounted () {
+    new BScroll(this.$refs.sellRatings, {
+      click: true
+    })
   },
-  methods:{
-    changetype(type) {
-      switch(type) {
-        case 'all': this.renderCom = this.comments; break;
-        case 'zan': this.renderCom =  this.comments.filter(item => {
-          return item.rateType === 0
-        }); break;
-        case 'buzan': this.renderCom = this.comments.filter(item => {
-          return item.rateType === 1
-        }); break;
+  methods: {
+    combineFilter (filterFun, arr) {
+      let condition = this.condition
+      let lastArr = [...arr]
+      for (let prop in filterFun) {
+        lastArr = filterFun[prop](lastArr, condition[prop])
       }
-      console.log(type, this.renderCom)
+
+      return lastArr
+    },
+    changetype (type) {
+      this.condition.type = type
+    },
+    filterType (arr, type) {
+      return arr.filter(item => {
+        if (type === 'zan') {
+          return item.rateType === 0
+        } else if (type === 'buzan') {
+          return item.rateType === 1
+        } else {
+          return 1
+        }
+      })
+    },
+    changeIgnore () {
+      this.condition.ignore = !this.condition.ignore
+    },
+    filterIgnore (arr, ignore) {
+      return arr.filter(item => {
+        if (ignore) {
+          return item.text
+        } else {
+          return 1
+        }
+      })
+    }
+  },
+  watch: {
+    condition: {
+      handler (newc) {
+        let filterFun = {
+          type: this.filterType,
+          ignore: this.filterIgnore
+        }
+        this.renderCom = this.combineFilter(filterFun, this.comments)
+      },
+      deep: true,
+      immediate: true
     }
   },
   components: {
@@ -314,4 +352,3 @@ export default {
   }
 }
 </style>
-

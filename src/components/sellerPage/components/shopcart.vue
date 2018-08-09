@@ -10,7 +10,7 @@
         <div :class="{price: true, 'noCount': totalCount > 0}">￥{{totalPrice}}</div>
         <div class="deliveryPrice">另需配送费{{deliveryPrice}}元</div>
       </div>
-      <div class="deliver-base" :class="{'payfor': minPrice <= totalPrice}">
+      <div class="deliver-base" :class="{'payfor': minPrice <= totalPrice}" @click="addToCart">
         {{inform}}
       </div>
     </div>
@@ -43,6 +43,12 @@ export default {
     }
   },
   props: {
+    selleravatar: {
+      type: String
+    },
+    sellername: {
+      type: String
+    },
     minPrice: {
       type: Number
     },
@@ -65,6 +71,17 @@ export default {
         food.count = 0
         this.showMore = !this.showMore
       })
+    },
+    addToCart () {
+      if (this.totalPrice >= this.minPrice) {
+        let params = [...this.selectFoods]
+        params.createTime = new Date().getTime()
+        params.shop = {
+          avatar: this.selleravatar,
+          name: this.sellername
+        }
+        this.$router.push({name: 'order', params})
+      }
     }
   },
   computed: {
